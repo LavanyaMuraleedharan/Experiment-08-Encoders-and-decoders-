@@ -55,17 +55,19 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-Step-1: create module encoder and decoder. 
-Step-2: Get inputs and outputs for encoders and decoders.
-Step-3: perform or operation for encoder and and logic for decoders.
-Step-4: perform RTL LOGIC and get waveform. Step-5: End the module.
+## Step-1: create module encoder and decoder. 
+## Step-2: Get inputs and outputs for encoders and decoders.
+## Step-3: perform or operation for encoder and and logic for decoders.
+## Step-4: perform RTL LOGIC and get waveform. Step-5: End the module.
 
 
 
 ### PROGRAM 
+```
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
 Developed by: Lavanya M
 RegisterNumber:  212222110021
+```
 
 ## ENCODER
 ```
