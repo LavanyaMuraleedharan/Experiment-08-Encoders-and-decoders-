@@ -60,18 +60,52 @@ D7 = X Y Z
 
 
 ### PROGRAM 
-/*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: Lavanya M
+RegisterNumber:  212222110021
 
+## ENCODER
+```
 
+module enc(a0,a1,a2,y0,y1,y2,y3,y4,y5,y6,y7);
+input y0,y1,y2,y3,y4,y5,y6,y7;
+output a0,a1,a2;
+or(a0,y7,y5,y3,y1);
+or(a1,y7,y6,y3,y2);
+or(a2,y7,y6,y5,y4);
+endmodule
+```
+
+## DECODER
+```
+module dec (a0,a1,a2,y0,y1,y2,y3,y4,y5,y6,y7);
+input a0,a1,a2;
+output y0,y1,y2,y3,y4,y5,y6,y7;
+wire a0bar,a1bar,a2bar;
+not(a0bar,a0);
+not(a1bar,a1);
+not(a2bar,a2);
+and(y0,a0bar,a1bar,a2bar);
+and(y1,a0,a1bar,a2bar);
+and(y2,a0bar,a1,a2bar);
+and(y3,a0,a1,a2bar);
+and(y4,a0bar,a1bar,a2);
+and(y5,a0,a1bar,a2);
+and(y6,a0bar,a1,a2);
+and(y7,a0,a1,a2);
+endmodule
+
+```
 
 
 
 
 ### RTL LOGIC  
+## ENCODER
+![image](https://github.com/LavanyaMuraleedharan/Experiment-08-Encoders-and-decoders-/assets/120103862/10181a24-1fb8-43f4-8f36-bed064bb9116)
+
+## DECODER
+![image](https://github.com/LavanyaMuraleedharan/Experiment-08-Encoders-and-decoders-/assets/120103862/8c3e95da-a194-4d64-9b95-6cbfe9bb9556)
 
 
 
@@ -82,15 +116,27 @@ RegisterNumber:
 
 ### TIMING DIGRAMS  
 
+## ENCODER
+![image](https://github.com/LavanyaMuraleedharan/Experiment-08-Encoders-and-decoders-/assets/120103862/c92ede8f-963a-4a1a-9365-d2c298471711)
+
+## DECODER
+![image](https://github.com/LavanyaMuraleedharan/Experiment-08-Encoders-and-decoders-/assets/120103862/2d9815cb-11fd-471b-a3d0-6473e9dd5133)
 
 
 
 
 ### TRUTH TABLE 
 
+## ENCODER
+![image](https://github.com/LavanyaMuraleedharan/Experiment-08-Encoders-and-decoders-/assets/120103862/1f2dd6d7-40ea-4044-a181-434f6052c325)
+
+
+## DECODER
+![image](https://github.com/LavanyaMuraleedharan/Experiment-08-Encoders-and-decoders-/assets/120103862/b3a4a3d6-5785-479c-af24-78e9247de7a2)
 
 
 
 
 
 ### RESULTS 
+Thus the program to design encoder and decoder is successfully completed.
